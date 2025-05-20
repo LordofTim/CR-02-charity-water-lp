@@ -17,3 +17,35 @@ Fonts:
 - Avenir
 
 */
+.small-header {
+  background-color: #fff7ed;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.large-header {
+  background-color: #fff7ed;
+  padding: 2rem;
+  max-width: 600px;
+  height: 120px;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: 100px;
+  height: 100vh;
+}
