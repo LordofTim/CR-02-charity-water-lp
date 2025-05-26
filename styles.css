@@ -1,51 +1,222 @@
-/* charity: water Brand Colors & Fonts
+/* charity: water Brand Colors & Fonts */
+:root {
+  --yellow: #ffc907;
+  --blue: #2e9df7;
+  --blue-dark: #1c6fdc;
+  --light-blue: #8bd1cb;
+  --green: #4fcb53;
+  --orange: #ff902a;
+  --red: #f5402c;
+  --dark-green: #159a48;
+  --pink: #f16061;
+  --dark-yellow: #ffc907;
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
+  /* Responsive font sizes */
+  --font-base: 1rem; /* 16px */
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
 
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-.small-header {
-  background-color: #fff7ed;
-  padding: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto;
-  align-items: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
+  --radius: 25px;
+  --padding-base: 1rem;
+  --padding-lg: 1.5rem;
 }
 
-.large-header {
-  background-color: #fff7ed;
-  padding: 2rem;
-  max-width: 600px;
-  height: 120px;
-  margin: 0 auto;
-  align-items: center;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  text-align: center;
-  
+* {
+  box-sizing: border-box;
 }
 
-.center-screen {
+body {
+  margin: 0;
+  font-family: 'Avenir', sans-serif, Arial, sans-serif;
+  background-color: #fff7e1;
+  color: #000;
+  line-height: 1.5;
+  font-size: var(--font-base);
+
+  /* Prevent content hidden behind fixed navbar */
+  padding-top: 3.5rem;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 247, 225, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1100;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;   /* vertically center content */
+  justify-content: space-between; /* logo left, nav links right */
+  height: 5rem; /* fixed height to contain logo */
+  font-weight: 600;
+}
+
+/* Logo inside navbar */
+.logo-container {
+  position: static;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-container img {
+  height: 2.5rem;  /* scale logo height to fit navbar */
+  width: auto;
+  max-width: none;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-size: var(--font-base);
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: var(--blue-dark);
+  outline: none;
+}
+
+/* Main Background with image */
+.main-background {
+  background-image: url('img/Background-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem 6rem 1rem;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: 100px;
-  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content wrapper - flex container */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Text content styling */
+.text-content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Large Header and Sub Header */
+.large-header, .sub-header {
+  background-color: rgba(255, 247, 225, 0.85); /* semi-transparent for readability */
+  border-radius: var(--radius);
+  max-width: 600px;
+  width: 100%;
+  text-align: center; /* center headline & subheader */
+  padding: var(--padding-base);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 10; /* ensure above background */
+}
+
+.large-header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--font-xl);
+  line-height: 1.2;
+}
+
+.sub-header {
+  font-size: var(--font-base);
+  line-height: 1.5;
+}
+
+/* Right side image container */
+.side-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Donate Button */
+.donate-button {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: var(--yellow);
+  color: black;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: var(--font-base);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(46, 157, 247, 0.3);
+  z-index: 9999;
+}
+
+.donate-button:hover,
+.donate-button:focus {
+  background-color: var(--blue-dark);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Responsive Typography Scaling */
+@media (min-width: 480px) {
+  body {
+    font-size: 1.125rem; /* 18px */
+  }
+  .large-header h1 {
+    font-size: 2.25rem;
+  }
+  .donate-button {
+    font-size: 1.125rem;
+    padding: 0.85rem 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.25rem; /* 20px */
+  }
+  .large-header h1 {
+    font-size: 2.5rem;
+  }
+  .sub-header {
+    font-size: 1.125rem;
+  }
+  .donate-button {
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-container img {
+    height: 5rem; /* This won’t affect navbar logo since we override height above */
+  }
 }

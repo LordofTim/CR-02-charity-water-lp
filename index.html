@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charity Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class= "large-header" style="background-color:#fff7e1; padding: 0px; text-align:center;" style="position:absloute;"
-    style="color:#000000;">One Simple Gift—in One Simple Click</h1>
-  </header>
-  <!-- Logo -->
-  <div style="position:absolute; top:20px; left:20px; display:flex; align-items:center; gap:10px;">
-    <img src="img/cw_logo.png" alt="Charity Water Logo" style="height:100px;">
-    <span style="font-weight:bold; font-size:1.2em;"></span>
-  </div>
-  <!-- Sub-Header -->
-  <div class="center-screen">
-    <header class="small-header" style="background-color:#fff7e1; text-align:center;   position:absolute;">
-    <h2 style="color:#000000;">Fast and easy giving that brings clean water—and joy—to real families. See your impact in one click.</h2>
-    </header>
-  <div>
-  <!-- Main Images -->
-   <img src="img/Background-1.png" alt="Background Image" style="width:auto; display:block;  margin:0px auto;">
+  <!-- Navbar with Logo and Navigation Links -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="img/cw_logo.png" alt="Charity Water Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
+  <!-- Main container with background image -->
+  <div class="main-background">
+    <div class="content-wrapper">
+      <!-- Left side: text -->
+      <div class="text-content">
+        <header class="large-header">
+          <h1>One Simple Gift—in One Simple Click</h1>
+        </header>
+
+        <section class="sub-header">
+          <h2>Fast and easy giving that brings clean water—and joy—to real families. See your impact in one click.</h2>
+          <button class="donate-button">Donate</button>
+        </section>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
